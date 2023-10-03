@@ -16,7 +16,6 @@ int main(){
     cin >> sPalin;
   }
   strBreakPalin(sPalin);
-//   cout << strBreakPalin(sPalin);
 
 
   return 0;
