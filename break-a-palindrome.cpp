@@ -14,14 +14,14 @@ int main(){
     cout << "enter a palindrome." << endl;
     cin >> sPalin;
   }
+  ifPalindrome(sPalin);
 }
 
 bool ifPalindrome(string str){
-    int n = str.length();
- 
-    // Swap character starting from two
-    // corners
-    for (int i = 0; i < n / 2; i++)
-        swap(str[i], str[n - i - 1]);
+  string revStr;
+  int n = str.length();
+  for (int i = 0; i < n / 2; i++)
+        revStr[i]=str[n-i];
+  cout<<revStr;
 }
 
