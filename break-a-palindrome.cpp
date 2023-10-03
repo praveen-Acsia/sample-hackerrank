@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <string.h>
 
 
 using namespace std;
@@ -9,19 +10,47 @@ void strBreakPalin(string str);
 
 int main(){
 
-  string sPalin;
-  while(!palindrome(sPalin)){
+  string sPalin="Aa";
+  while(!ifPalindrome(sPalin)){
     cout << "enter a palindrome." << endl;
     cin >> sPalin;
   }
-  ifPalindrome(sPalin);
-}
+  strBreakPalin(sPalin);
+//   cout << strBreakPalin(sPalin);
 
+
+  return 0;
+}
 bool ifPalindrome(string str){
-  string revStr;
   int n = str.length();
-  for (int i = 0; i < n / 2; i++)
-        revStr[i]=str[n-i];
-  cout<<revStr;
+   for (int i = 0; i < n / 2; i++){
+        if(str[i]==str[n-i-1]){
+            continue;
+        }
+        else{
+            return false;
+        }
+   }
+  return true;
+}
+void strBreakPalin(string str){
+    int total=0;
+    for(int i =0; i<str.length(); i++){
+        
+        if(str[i]!='a'){
+            str[i]='a';
+            if(!ifPalindrome(str)){
+                break;
+            }
+        }
+        
+        total+=int(str[i]);
+    }
+    if(total==str.length()*97){
+        cout<<"IMPOSSIBLE";
+    }
+    else{
+        cout << str;
+    }
 }
 
