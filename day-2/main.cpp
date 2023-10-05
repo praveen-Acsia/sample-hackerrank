@@ -14,6 +14,9 @@ int min_play(vector<int> v){
             total++;
         }
     }
+    if(total<0){
+        return 0;
+    }
     int player1=0;
     int player2=0;
     for(int i =0; i<v.size(); i++){
