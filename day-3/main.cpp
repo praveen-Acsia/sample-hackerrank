@@ -1,4 +1,4 @@
-include <iostream>
+#include <iostream>
 
 
 int nsum(int a , int l, int d){
