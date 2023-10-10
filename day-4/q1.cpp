@@ -34,7 +34,11 @@ string winner(string& erica, string& bob) {
 
 		}
 	}
-	return erica_point > bob_point ? "ERICA" : "BOB";
+	if (erica_point != bob_point)
+		
+		return erica_point > bob_point ? "ERICA" : "BOB";
+
+	return "Tie";
 }
 
 int main() {
