@@ -1,9 +1,7 @@
 #include<iostream>
 #include<string>
 
-
 using namespace std;
-
 
 string decript(string& encript, int& k) {
 	int curr;
@@ -11,13 +9,11 @@ string decript(string& encript, int& k) {
 	for (int i = 0; i < encript.length(); i++) {
 		curr = (int)encript[i] - k;
 		while (curr < 65) {
-		    
-				curr = 90 -(65-curr)+1 ;
+		    curr = 90 -(65-curr)+1 ;
 		}
 		decript.push_back((char)curr);
 	}
 	return decript;
-
 }
 
 int main() {
@@ -31,5 +27,4 @@ int main() {
 	cin >> k;
 
 	cout << decript(encript, k);
-
 }
