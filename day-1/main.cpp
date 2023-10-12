@@ -23,12 +23,13 @@ int min_opp(unordered_map<char, int>& map_){
 int main()
 {
     string S;
+    cout<< "enter the string : "<<endl;
     cin >> S;
     
     unordered_map<char,int> map_;
     
     get_count(map_, S);
-    cout << min_opp;
+    cout << min_opp(map_);
 
     return 0;
 }
