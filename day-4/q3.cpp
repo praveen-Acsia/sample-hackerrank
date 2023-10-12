@@ -6,10 +6,11 @@ using namespace std;
 string decript(string& encript, int& k) {
 	int curr;
 	string decript;
+	k=k%26;
 	for (int i = 0; i < encript.length(); i++) {
 		curr = (int)encript[i] - k;
-		while (curr < 65) {
-		    curr = 90 -(65-curr)+1 ;
+		if(curr<65){
+		    curr = 90 -(65-curr)+1;
 		}
 		decript.push_back((char)curr);
 	}
