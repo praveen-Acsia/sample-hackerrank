@@ -24,9 +24,9 @@ int uniqIdx(string& s) {
 		tomap(umap, s[idx],idx);
 	}
 
-	for (int i = 0; i < (s.length()/2); i++) 
+	for (long i = 0; i < (s.length()/2); i++) 
 	{	
-		int j = ((s.length() / 2) * 2) - i - 1;
+		long j = ((s.length() / 2) * 2) - i - 1;
 		f = s[i];
 		b = s[j];
 		tomap(umap, f, i);
