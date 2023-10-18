@@ -8,16 +8,15 @@ using namespace std;
 string findOdd(vector<string>& arr) {
 	int diff;
 	vector<vector<int>> vals;
-	vector<int>val;
 	string oddone="";
 
 	for (int i = 0; i < arr.size(); i++) {
+		vector<int>val;
 		for (int j = 0; j < arr[i].length()-1; j++) {
 			diff = arr[i][j + 1] - arr[i][j];
 			val.push_back(diff);
 		}
 		vals.push_back(val);
-		val.clear();
 	}
 	for (int i = 0; i < vals.size(); i++) {
 		if (count(vals.begin(), vals.end(), vals[i]) == 1) {
