@@ -6,7 +6,7 @@
 bool exord(std::string& subs) {
 	int sum = 0;
 	for (int i = 0; i < subs.length(); i++) {
-		sum += ((int)subs[i] - 96) / 3;
+		sum += ((int)subs[i] - 96) / 3 + 1;
 	}
 	if (sum % subs.length() == 0) {
 		return true;
